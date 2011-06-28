@@ -1,0 +1,101 @@
+#Copyright (c) 2011 Yahoo! Inc. All rights reserved. Licensed under the BSD License. 
+# See accompanying LICENSE file or http://www.opensource.org/licenses/BSD-3-Clause for the specific language governing permissions and limitations under the License.
+
+Welcome to the Boss Mashup Framework - an experimental, proof-of-concept library
+for operating on Boss Search results and web data sources in a SQL like fashion.
+
+I. Installation
+===============
+
+[1] First, download and install python 2.5
+
+http://www.python.org/download/
+
+[2] Then download and install simplejson
+
+simplejson
+http://pypi.python.org/pypi/simplejson/
+
+Save this anywhere you can cd to via the terminal
+
+Decompress the file
+
+> tar -xzvf simplejson-1.9.2.tar.gz
+> cd <new_folder>
+
+Then install
+
+> sudo python setup.py build
+> sudo python setup.py install
+
+[3] Then download and install oauth
+
+oauth
+https://github.com/simplegeo/python-oauth2, click Downloads, click "Download .tar.gz"
+
+Save this anywhere you can cd to via the terminal
+
+Decompress the file
+
+> tar -xzvf <downloaded_file>.tar.gz
+> cd <new_folder>
+
+Then install
+
+> sudo python setup.py build
+> sudo python setup.py install
+
+Install setuptools for python2.5 if it complains for the same.
+
+[4] Create a folder named deps within this boss_mashup_framework_0.1 directory:
+
+boss_mashup_framework-0.1> mkdir deps
+
+[5] Download the following 2 items into the deps folder:
+
+dict2xml
+http://dict2xml.googlecode.com/files/dict2xml.tar.gz
+
+xml2dict
+http://xml2dict.googlecode.com/files/xml2dict.tgz
+
+[6] Decompress the two files from the last step from inside the deps folder:
+
+boss_mashup_framework-0.1/deps/> tar -xzvf dict2xml.tar.gz
+boss_mashup_framework-0.1/deps/> tar -xzvf xml2dict.tgz
+
+[7] Within the boss_mashup_framework-0.1 directory, execute the following 2 commands:
+
+sudo python setup.py build
+sudo python setup.py install
+
+[8] Set your user information (e.g. appid for V1, cc_key,cc_secrent,source_tag for V2) in the config.json file inside boss_mashup_framework-0.1 directory
+
+[9] To test, execute the following command (from the same directory as above) with no errors:
+
+python examples_v2/ex1.py
+
+
+II. Usage
+=========
+
+Check out the source files in the "examples" directory for usage syntax
+
+Also, take a look in the library sources for code documentation
+
+Here's a quick library organization description:
+
+yos.yql.db provides classes and functions for creating and remixing tables out of XML/JSON responses
+yos.boss.ysearch provides a single function for fetching BOSS search results
+yos.yql.udfs provides some handy user defined functions for yos.yql.db.select calls
+yos.util.text provides some handy functions for processing and comparing text (strings)
+yos.util.console provides a write function that prints messages to stdout despite encoding errors
+
+When using yos.yql.db, keep in mind that for join calls
+like join (inner_join), outer_join (left_outer_join)
+that the first parameter (predicate function) should operate on row keys assuming no namespacing (field name text before the '$')
+like row['yn$title'] => should be row['title'] within the predicate function code
+This is because the predicate function is being applied like a map function,
+so the order of the tables input (second parameter) does not matter
+It also doesn't make sense when the number of tables exceeds 2
+as a predicate function only operates on records from two tables at a time

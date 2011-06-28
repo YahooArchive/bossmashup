@@ -1,0 +1,21 @@
+/*
+ Copyright (c) 2008 Yahoo! Inc. All rights reserved.  Licensed under the
+ Yahoo! Search BOSS Terms of Use
+ (http://info.yahoo.com/legal/us/yahoo/search/bosstos/bosstos-2317.html)
+*/
+
+/* california result .css */
+
+.floatright {float: right; margin: 10px 5px 0px 0px; background-color: #fff; padding: 5px;}
+.floatleft {float: left; margin: 0px 0px 20px 0px; background-color: #fff; padding: 5px;}
+li.abstract {width:565px; list-style-type: none;}
+li.overlay {width:500px; margin-left:20px; list-style-type: none; margin-top:10px;}
+.source {font-family: arial; color: #64A6DA; font-size: 11px; line-height: 13px;}
+.source a:link {font-family: arial; color:#64A6DA; text-decoration: underline;}
+a:link {font-family: arial; color:#0000DE; text-decoration: underline;}
+a:hover {font-family: arial; color:#0000DE; text-decoration: underline;}
+a:visited {font-family: arial; color:#0000DE; text-decoration: underline;} 
+.heading {font-family: arial; color: #0000DE; font-size: 16px; line-height: 22px;}
+.abstract {font-family: arial; color: #000000; font-size: 13px; line-height: 16px;}
+.metadata {font-family: arial; color: #8283BF; font-size: 13px; line-height: 16px;}
+.url {font-family: arial; color: #008000; font-size: 13px; line-height: 16px;}

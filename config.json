@@ -1,0 +1,13 @@
+{"appid":"Add your V1 ID here if you using that service",
+ "email": "boss-feedback@yahoo-inc.com",
+ "org": "Yahoo! Inc.",
+ "agent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.8.1) Gecko/20061010 Firefox/2.0",
+ "commercial": false,
+ "purpose": "To create the best search experience ever",
+ "version": "1.0",
+ "uri_v1": "http://boss.yahooapis.com/ysearch/",
+ "uri_v2": "http://yboss.yahooapis.com/ysearch/",
+ "cc_key": "ADD YOUR KEY HERE",
+ "cc_secret": "ADD YOUR CONSUMER SECRET HERE",
+ "source_tag": "ADD YOUR SOURCE TAG HERE"
+}

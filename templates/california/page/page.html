@@ -1,0 +1,45 @@
+<!doctype html public "-//W3C/DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+ Copyright (c) 2008 Yahoo! Inc. All rights reserved.  Licensed under the
+ Yahoo! Search BOSS Terms of Use
+ (http://info.yahoo.com/legal/us/yahoo/search/bosstos/bosstos-2317.html)
+-->
+
+<!-- california page html template-->
+
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script>
+function roll_over(img_name, img_src)
+{
+  document[img_name].src = img_src;
+}
+</script>
+<style>input.ygbt,#at .panel .scroll-h span,#at .panel .scroll-v span,#at .tgrad,#atbar .c,#atbar .l,#atbar .r,#atbar-t,#atf-remove span,#ft,#gl,#glcont .ls,#glcont .rs,#hd,#ss a.ss-remove,#ss .bl,#ss .br,.alsotry .bulb,.ftad .yschscrt,.menu-link span,.iy,.ylogo,.ylogo-bot,.yschlcstr i,.yschpplst i,.yschalrtz i{background:url(<?header_background_img_dir?>ngsprt_20080122b.png) no-repeat;}</style>
+<link rel="stylesheet" type="text/css" href="<?header_css?>">
+<link rel="stylesheet" type="text/css" href="<?header_abstract_css?>">
+<title><?header_title?></title>
+</head>
+
+<body id="ysch" class="gecko windows" onLoad="if(document.getElementById){init();}">
+<div id="doc">
+	<div id="hd">
+    	<div id="ygunav">
+			<ul>
+            	<li>&nbsp;</li>
+            </ul>
+        </div>
+        <form id="sf" method="get" action="<?header_endpoint?>" name="s">
+		<div id="glcont">
+            <div id="gl">
+                <div id="sbx">
+                        <input type="text" class="yschsp" id="yschsp" tabindex="1" name="q" value="" /><input type="submit" tabindex="2" class="ygbt" value="Search"/>
+                </div>
+<br/>
+<br/>
+<?header_results?>
+            </div>
+    	</div>
+	</div>
+</div>
+</body>
+</html>
